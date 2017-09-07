@@ -23,7 +23,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 
 
 //@Configuration
-@EnableTransactionManagement
+//@EnableTransactionManagement
 //@MapperScan(basePackages=WriteDruidConfig.WRITE_PACKAGE)
 public class WriteDruidConfig {
 	static final String WRITE_PACKAGE = "cn.just_do.springboot.dal.write";
