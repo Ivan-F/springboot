@@ -1,0 +1,16 @@
+${AnsiColor.BRIGHT_GREEN}
+  888888 888     888  .d8888b. 88888888888      8888888b.   .d88888b.       .d8888b.  888b    888
+    "88b 888     888 d88P  Y88b    888          888  "Y88b d88P" "Y88b     d88P  Y88b 8888b   888
+     888 888     888 Y88b.         888          888    888 888     888     888    888 88888b  888
+     888 888     888  "Y888b.      888          888    888 888     888     888        888Y88b 888
+     888 888     888     "Y88b.    888          888    888 888     888     888        888 Y88b888
+     888 888     888       "888    888   888888 888    888 888     888     888    888 888  Y88888
+     88P Y88b. .d88P Y88b  d88P    888          888  .d88P Y88b. .d88P d8b Y88b  d88P 888   Y8888
+     888  "Y88888P"   "Y8888P"     888          8888888P"   "Y88888P"  Y8P  "Y8888P"  888    Y888
+   .d88P
+ .d88P"
+888P"
+
+${AnsiColor.BRIGHT_GREEN}
+${spring-boot.version}
+http://blog.didispace.com/books/spring-boot-reference/III.%20Using%20Spring%20Boot/20.1%20Property%20defaults.html
