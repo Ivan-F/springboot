@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 
@@ -43,5 +44,11 @@ public class TagController {
 		System.out.println("test3-/{id}-----:" + id);
 		System.out.println("URI--:" + req.getRequestURI());
 		System.out.println("URL--:" + req.getRequestURL());
+	}
+
+	@RequestMapping("/upload")
+	public void upload(MultipartFile[] file){
+		System.out.println(file[0].getName());
+		System.out.println(file[0].getOriginalFilename());
 	}
 }
