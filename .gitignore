@@ -1,6 +1,6 @@
 /.settings
 /bin
-*/target/*
+/target/*
 /logs
 */out/
 
