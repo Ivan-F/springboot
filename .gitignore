@@ -20,4 +20,4 @@
 !application.properties
 
 #保留目录结构
-*/.gitkeep
+!.gitkeep
