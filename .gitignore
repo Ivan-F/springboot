@@ -4,6 +4,9 @@
 /logs
 */out/
 
+!/src/*
+.gitkeep
+
 # filter config files, except .gitignore
 *.MF
 !.gitignore
@@ -18,5 +21,3 @@
 *.class
 *.log
 !application.properties
-
-#.gitkeep
