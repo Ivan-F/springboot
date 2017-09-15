@@ -13,6 +13,6 @@ ${AnsiColor.BRIGHT_GREEN}
 
 ${AnsiColor.BRIGHT_YELLOW}
 ${spring-boot.formatted-version}
-http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/23.5.%20Application%20events%20and%20listeners.html
 
-https://waylau.gitbooks.io/apache-shiro-1-2-x-reference/content/
+动态代理：jdk动态代理与CGLIB http://blog.csdn.net/zghwaicsdn/article/details/50957474
+http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/23.5.%20Application%20events%20and%20listeners.html
