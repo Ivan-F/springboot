@@ -15,4 +15,3 @@ ${AnsiColor.BRIGHT_YELLOW}
 ${spring-boot.formatted-version}
 
 动态代理：jdk动态代理与CGLIB http://blog.csdn.net/zghwaicsdn/article/details/50957474
-http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/26.6%20Logback%20extensions.html
