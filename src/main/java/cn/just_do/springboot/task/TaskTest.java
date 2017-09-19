@@ -1,12 +1,16 @@
 package cn.just_do.springboot.task;
 
+import cn.just_do.springboot.domain.TT;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.scheduling.annotation.Schedules;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.List;
 
 @Component
 public class TaskTest {
@@ -36,11 +40,13 @@ public class TaskTest {
         LocalDateTime ldt = LocalDateTime.now();
         System.out.println(ldt.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + " >>fixedRate执行....");
     }
-
-    @Scheduled(cron="0 15 3 * * ?")
+    @Scheduled(cron="0/1 * * * * ?")
     public void cronJob(){
-        LocalDateTime ldt = LocalDateTime.now();
-        System.out.println(ldt.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + " >>cron执行....");
+        //{} 据说大括号是匿名内部类，不写这对括号，直接获取类型是获取不到的，类型会被虚拟机擦除
+        TT<String> tt = new TT<String>(){};
+        Type t = tt.getClass().getGenericSuperclass();
+        ParameterizedType pt = (ParameterizedType)t;
+        System.out.println(pt.getActualTypeArguments()[0]);
     }
 
 }
