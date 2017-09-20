@@ -17,6 +17,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.github.pagehelper.PageHelper;
 
+//多数据源配置 http://blog.csdn.net/maoyeqiu/article/details/74011626
 //@Configuration
 //@MapperScan(basePackages=ReadDruidConfig.READ_PACKAGE)
 public class ReadDruidConfig {
