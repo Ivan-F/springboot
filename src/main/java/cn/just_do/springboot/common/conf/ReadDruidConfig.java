@@ -52,9 +52,15 @@ public class ReadDruidConfig {
 		PageHelper pageHelper = new PageHelper();
 		Properties p = new Properties();
 		p.setProperty("offsetAsPageNum", "true");
-		p.setProperty("rowBoundsWithCount", "true");
-		p.setProperty("reasonable", "true");
-		p.setProperty("dialect", "mysql");
+		//默认为false;该参数对使用 RowBounds 作为分页参数时有效;设置为true时，会进行 count 查询
+//		p.setProperty("rowBoundsWithCount", "true");
+
+		//支持： List<Country> selectByPageNumSize(@Param("user") User user,@Param("pageNum") int pageNum,@Param("pageSize") int pageSize);
+		p.setProperty("supportMethodsArguments","true");
+		//默认false;为 true 时，pageNum<=0 时会查询第一页， pageNum>pages（超过总数时），会查询最后一页
+//		p.setProperty("reasonable", "true");
+		//默认：false;运行时根据多数据源自动识别对应方言的分页
+		p.setProperty("autoRuntimeDialect","true");
 		pageHelper.setProperties(p);
 		return pageHelper;
 	}
