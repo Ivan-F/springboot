@@ -15,7 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.Date;
 
 @RestController
-@ResponseBody
 @RequestMapping("/tag")
 public class TagController {
 

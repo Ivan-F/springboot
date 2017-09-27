@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class AdminController {
 
 	@RequestMapping(value="",method=RequestMethod.GET)
-	public void test1(HttpServletRequest req){
+	public String test1(HttpServletRequest req){
 		System.out.println("test1------");
 		System.out.println("URI--:" + req.getRequestURI());
 		System.out.println("URL--:" + req.getRequestURL());
+		return "SUCCESS";
 	}
 	@RequestMapping(value="/",method=RequestMethod.GET)
 	public void test2(HttpServletRequest req){

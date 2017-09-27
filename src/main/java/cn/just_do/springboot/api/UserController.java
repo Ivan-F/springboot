@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.FileWriter;
 
 @RestController
-@ResponseBody
 @RequestMapping("/user")
 public class UserController {
 
