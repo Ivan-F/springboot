@@ -41,12 +41,4 @@ public class AdminController {
 		List<String> list =  Arrays.asList("110","111","112");
 		this.ts.fileConvert(list);
 	}
-	
-	@RequestMapping(value="/{id}",method=RequestMethod.GET)
-	public void test3(@PathVariable("id")String id,HttpServletRequest req){
-		System.out.println("test3-/{id}-----:" + id);
-		System.out.println("URI--:" + req.getRequestURI());
-		System.out.println("URL--:" + req.getRequestURL());
-	}
-	
 }
