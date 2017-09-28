@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
-@Component
+//@Component
 public class TaskTest {
 
     private final static long ONE_Minute =  60 * 1000;
