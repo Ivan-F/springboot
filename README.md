@@ -41,3 +41,5 @@ SELECT * FROM
     start with t.feedback_id in(select feedback_id from t_member_feedback where parent_id = '-1')
     connect by prior t.feedback_id = t.PARENT_ID
     
+    JNI
+    http://blog.csdn.net/huachao1001/article/details/53906237

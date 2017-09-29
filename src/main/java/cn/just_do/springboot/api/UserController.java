@@ -2,6 +2,8 @@ package cn.just_do.springboot.api;
 
 import javax.servlet.http.HttpServletRequest;
 
+import cn.just_do.springboot.bll.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,28 +17,17 @@ import java.io.FileWriter;
 @RequestMapping("/user")
 public class UserController {
 
+	@Autowired
+	private UserService userService;
+
 	/**
 	 * 新增
 	 * @param req
 	 */
 	@PutMapping("")
 	public void test1(HttpServletRequest req){
-		System.out.println("test1------");
-		System.out.println("URI--:" + req.getRequestURI());
-		System.out.println("URL--:" + req.getRequestURL());
+		userService.login();
 	}
-	@RequestMapping(value="/",method=RequestMethod.GET)
-	public void test2(HttpServletRequest req){
-		System.out.println("test2------:");
-		System.out.println("URI--:" + req.getRequestURI());
-		System.out.println("URL--:" + req.getRequestURL());
-	}
-	
-	@RequestMapping(value="/{id}",method=RequestMethod.GET)
-	public void test3(@PathVariable("id")String id,HttpServletRequest req,String a){
-		System.out.println("test3-/{id}-----:" + id);
-		System.out.println("URI--:" + req.getRequestURI());
-		System.out.println("URL--:" + req.getRequestURL());
-	}
+
 	
 }

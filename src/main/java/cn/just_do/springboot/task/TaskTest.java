@@ -48,5 +48,4 @@ public class TaskTest {
         ParameterizedType pt = (ParameterizedType)t;
         System.out.println(pt.getActualTypeArguments()[0]);
     }
-
 }
