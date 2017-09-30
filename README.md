@@ -43,3 +43,5 @@ SELECT * FROM
     
     JNI
     http://blog.csdn.net/huachao1001/article/details/53906237
+    
+    http://blog.didispace.com/books/java8-tutorial/ch4.html
