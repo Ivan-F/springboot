@@ -3,13 +3,7 @@ package cn.just_do.springboot.api;
 import javax.servlet.http.HttpServletRequest;
 
 import cn.just_do.springboot.domain.TagLibrary;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
@@ -39,10 +33,8 @@ public class TagController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delTag(@PathVariable("id")String id,HttpServletRequest req){
-		System.out.println("test3-/{id}-----:" + id);
-		System.out.println("URI--:" + req.getRequestURI());
-		System.out.println("URL--:" + req.getRequestURL());
+	public void delTag(@RequestParam("file") MultipartFile file){
+		System.out.println("test3-/{id}-----:" + file);
 	}
 
 	@RequestMapping("/upload")
