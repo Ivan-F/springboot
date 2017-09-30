@@ -15,14 +15,17 @@ public class UserService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.loadLibrary("hello");
+        System.loadLibrary("auth");
     }
     @Async
     public void login(){
-
-        auth();
+        String[] a = {"11201120GNC","#$#@"};
+        auth3(a);
         System.out.println("Native Function Execution Complete");
     }
 
     private native void auth();
+
+    private native void auth2(String a);
+    private native void auth3(String[] a);
 }

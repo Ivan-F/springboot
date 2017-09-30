@@ -13,7 +13,23 @@ extern "C" {
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_cn_just_1do_springboot_bll_UserService_auth
-  (JNIEnv *, jobject);
+  (JNIEnv *env, jobject obj);
+
+/*
+ * Class:     cn_just_do_springboot_bll_UserService
+ * Method:    auth2
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_cn_just_1do_springboot_bll_UserService_auth2
+  (JNIEnv *env, jobject obj, jstring content);
+
+/*
+ * Class:     cn_just_do_springboot_bll_UserService
+ * Method:    auth3
+ * Signature: ([Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_cn_just_1do_springboot_bll_UserService_auth3
+  (JNIEnv *env, jobject obj, jobjectArray objArray);
 
 #ifdef __cplusplus
 }
