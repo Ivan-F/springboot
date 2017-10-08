@@ -21,7 +21,7 @@ JNIEXPORT void JNICALL Java_cn_just_1do_springboot_bll_UserService_auth
  * Signature: (Ljava/lang/String;)V
  */
 JNIEXPORT void JNICALL Java_cn_just_1do_springboot_bll_UserService_auth2
-  (JNIEnv *env, jobject obj, jstring content);
+  (JNIEnv *env, jobject obj, jstring str);
 
 /*
  * Class:     cn_just_do_springboot_bll_UserService
@@ -29,7 +29,7 @@ JNIEXPORT void JNICALL Java_cn_just_1do_springboot_bll_UserService_auth2
  * Signature: ([Ljava/lang/String;)V
  */
 JNIEXPORT void JNICALL Java_cn_just_1do_springboot_bll_UserService_auth3
-  (JNIEnv *env, jobject obj, jobjectArray objArray);
+  (JNIEnv *env, jobject obj, jobjectArray objArr);
 
 #ifdef __cplusplus
 }

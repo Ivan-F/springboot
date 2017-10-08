@@ -11,7 +11,9 @@ public class UserService {
 
     static {
         try {
-            Util.addLibraryDir("D:\\Workspace\\GitHub\\springboot\\src\\main\\resources\\jni");
+            String path1 = "D:\\Program\\GitHub\\springboot\\src\\main\\resources\\jni";
+            String path2 = "D:\\Workspace\\GitHub\\springboot\\src\\main\\resources\\jni";
+            Util.addLibraryDir(path1);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -20,7 +22,7 @@ public class UserService {
     @Async
     public void login(){
         String[] a = {"11201120GNC","#$#@"};
-        auth3(a);
+        auth2("11201120");
         System.out.println("Native Function Execution Complete");
     }
 

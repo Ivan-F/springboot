@@ -38,6 +38,25 @@
     connect by prior t.feedback_id = t.PARENT_ID
     ```
 ---
+http://blog.didispace.com/books/java8-tutorial/ch4.html
+
 # JNI
  >http://blog.csdn.net/huachao1001/article/details/53906237  
- >http://blog.didispace.com/books/java8-tutorial/ch4.html
+ 
+# IDEA External Tool
+## JAVAH JNI
+```
+   pragram:javah
+parameters:-jni -classpath $OutputPath$ -d $ProjectFileDir$/src/main/resources/jni $FileClass$
+```
+
+## GCC build DLL
+```
+   pragram:gcc
+parameters:-Wl,--add-stdcall-alias -I"$JDKPath$\include" -I"$JDKPath$\include\win32" -shared -o $ProjectFileDir$/src/main/resources/jni/$FileNameWithoutExtension$.dll $ProjectFileDir$/src/main/resources/jni/$FileNameWithoutExtension$.cpp
+
+#IDEA VM options
+run configurations
+```
+-Djava.library.path=E:\workspace\StudyJNI\lib
+```
