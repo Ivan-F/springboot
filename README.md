@@ -56,7 +56,29 @@ parameters:-jni -classpath $OutputPath$ -d $ProjectFileDir$/src/main/resources/j
 parameters:-Wl,--add-stdcall-alias -I"$JDKPath$\include" -I"$JDKPath$\include\win32" -shared -o $ProjectFileDir$/src/main/resources/jni/$FileNameWithoutExtension$.dll $ProjectFileDir$/src/main/resources/jni/$FileNameWithoutExtension$.cpp
 
 #IDEA VM options
-run configurations
+```
+## Run configurations
 ```
 -Djava.library.path=E:\workspace\StudyJNI\lib
+```
+
+#JS
+```javascript
+ function unique(array){
+ 	var n = []; //一个新的临时数组 
+ 	//遍历当前数组 
+ 	for(var i = 0; i < array.length; i++){ 
+ 	//如果当前数组的第i已经保存进了临时数组，那么跳过， 
+ 	//否则把当前项push到临时数组里面 
+ 	if (n.indexOf(array[i]) == -1) n.push(array[i]); 
+ 	} 
+ 	return n; 
+ }
+ 
+ function removeMember(id){
+ 	var index = this.indexOf(val);
+ 	if (index > -1) {
+ 		this.splice(index, 1);
+ 	}
+ }
 ```
