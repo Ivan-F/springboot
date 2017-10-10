@@ -12,16 +12,16 @@ import java.io.InputStreamReader;
 @Service
 public class UserService {
 
-//    static {
-//        try {
-//            String path1 = "D:\\Program\\GitHub\\springboot\\src\\main\\resources\\jni";
-//            String path2 = "D:\\Workspace\\GitHub\\springboot\\src\\main\\resources\\jni";
-//            Util.addLibraryDir(path1);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        System.loadLibrary("auth");
-//    }
+    static {
+        try {
+            String path1 = "D:\\Program\\GitHub\\springboot\\src\\main\\resources\\jni";
+            String path2 = "D:\\Workspace\\GitHub\\springboot\\src\\main\\resources\\jni";
+            Util.addLibraryDir(path1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.loadLibrary("auth");
+    }
     @Async
     public void login(){
         String[] a = {"11201120GNC","#$#@"};
