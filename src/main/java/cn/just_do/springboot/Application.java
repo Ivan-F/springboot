@@ -1,5 +1,6 @@
 package cn.just_do.springboot;
 
+import cn.just_do.springboot.common.util.Util;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -14,8 +15,15 @@ import java.io.*;
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
+//		try {
+//			Util.addLibraryDir("/home/ivan/Downloads/testconvert/");
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+		System.loadLibrary("convert");
 		SpringApplication.run(Application.class, args);
+
 	}
 
 	
