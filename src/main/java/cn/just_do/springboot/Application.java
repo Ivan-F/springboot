@@ -21,8 +21,16 @@ public class Application extends SpringBootServletInitializer {
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
-		System.loadLibrary("convert");
-		SpringApplication.run(Application.class, args);
+//		System.loadLibrary("convert");
+//		SpringApplication.run(Application.class, args);
+
+		int a = 01;
+		int ref = 12;
+		if((ref & a) == 1){
+			System.out.println("true:" + (ref & a));
+		}else{
+			System.out.println("false:" + (ref & a));
+		}
 
 	}
 
