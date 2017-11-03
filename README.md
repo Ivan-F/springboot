@@ -38,7 +38,6 @@
     connect by prior t.feedback_id = t.PARENT_ID
     ```
 ---
-http://blog.didispace.com/books/java8-tutorial/ch4.html
 
 # JNI
  >http://blog.csdn.net/huachao1001/article/details/53906237  
@@ -82,3 +81,4 @@ parameters:-Wl,--add-stdcall-alias -I"$JDKPath$\include" -I"$JDKPath$\include\wi
  	}
  }
 ```
+https://yeasy.gitbooks.io/docker_practice/content/network/
