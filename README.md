@@ -1,5 +1,5 @@
 # springboot
-[springboot](http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/27.1.1.%20Spring%20MVC%20auto-configuration.html)  
+[springboot](http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/30.3.1%20Connecting%20to%20a%20Neo4j%20database.html)  
 ---
 ## 提交空目录  
     find . -type d -empty -exec touch {}/.gitkeep \;
@@ -81,7 +81,6 @@ parameters:-Wl,--add-stdcall-alias -I"$JDKPath$\include" -I"$JDKPath$\include\wi
  	}
  }
 ```
-http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/29.1.1.%20Embedded%20Database%20Support.html
 
 ### Markdown
 
