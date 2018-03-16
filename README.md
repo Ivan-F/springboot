@@ -1,5 +1,5 @@
 # springboot
-[springboot](http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/30.3.1%20Connecting%20to%20a%20Neo4j%20database.html)  
+[springboot](http://blog.didispace.com/books/spring-boot-reference/IV.%20Spring%20Boot%20features/32.2%20AMQP.html)  
 
 [Python](http://python3-cookbook.readthedocs.io/zh_CN/latest/)  
 
