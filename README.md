@@ -92,7 +92,10 @@ https://morrowind.gitbooks.io/gitbook_notes/content/GitBook/markdown_syntax.html
 http://ibruce.info/2013/11/26/markdown/
 https://wastemobile.gitbooks.io/gitbook-chinese/content/
 
+---
+
 # 工作日计算伪代码
+
 ```
 public int workDay(String year,String month) {
     	int maxDay = 0;
@@ -130,4 +133,4 @@ public int workDay(String year,String month) {
     	}
         return map.size();
     }
-    ```
+```
