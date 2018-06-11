@@ -91,3 +91,43 @@ https://wizardforcel.gitbooks.io/markdown-simple-world/content/2.html
 https://morrowind.gitbooks.io/gitbook_notes/content/GitBook/markdown_syntax.html
 http://ibruce.info/2013/11/26/markdown/
 https://wastemobile.gitbooks.io/gitbook-chinese/content/
+
+# 工作日计算伪代码
+```
+public int workDay(String year,String month) {
+    	int maxDay = 0;
+    	Calendar cal = Calendar.getInstance();
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    	//设置日期
+    	cal.set(Integer.parseInt(year),Integer.parseInt(month) - 1,1);
+    	String startDates = sdf.format(cal.getTime());
+    	maxDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+    	cal.set(Calendar.DAY_OF_MONTH,maxDay);
+    	String endDates = sdf.format(cal.getTime());    	
+    	
+    	Criteria criteria = new Criteria();
+    	criteria.put("startDates", startDates);
+    	criteria.put("endDates", endDates);
+    	
+    	List<ZzHolidayInfo> holidayList = zzHolidayInfoService.selectByConditions(criteria);
+    	Map<String,Object> map = new HashMap<String,Object>();
+    	
+    	for(int i = 1;i <= maxDay;i++){
+    		cal.set(Integer.parseInt(year),Integer.parseInt(month) - 1,i);
+    		if(cal.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY && cal.get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY){
+    			//0.假想工作日
+    			map.put(sdf.format(cal.getTime()), 0);
+    		}
+    	}
+    	
+    	for(ZzHolidayInfo day: holidayList){
+    		//1.法定假日
+    		if(day.getHolidayOrWork() == "1"){
+    			map.remove(day.getDates());
+    		}
+    		//2.补班(周六日才可能存在补班)
+    		map.put(day.getDates(),day.getHolidayOrWork());
+    	}
+        return map.size();
+    }
+    ```
